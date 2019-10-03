@@ -2,13 +2,15 @@
 #include <stdbool.h>
 #include <stdlib.h>
 
-typedef struct Node
+typedef struct 
+Node
 {
 	int data;
 	struct Node *next;
 } node;
 
-node* createNode(int data, node *next)
+node*
+createNode(int data, node *next)
 {
 	node *new_node; 
 
@@ -19,7 +21,8 @@ node* createNode(int data, node *next)
 	return new_node;
 }
 
-void concat(node *head, int data)
+void
+concat(node *head, int data)
 {
 	node *current = head;
 
@@ -39,7 +42,8 @@ void concat(node *head, int data)
 	}
 }
 
-void insert(node **head, int data) {
+void
+insert(node **head, int data) {
 	node *new_node;
 
 	new_node = malloc(sizeof(node));
@@ -49,7 +53,8 @@ void insert(node **head, int data) {
 	*head = new_node;
 }
 
-void printList(node *head) 
+void
+printList(node *head) 
 {
 	node *current = head;
 
@@ -62,7 +67,8 @@ void printList(node *head)
 	}
 }
 
-int main()
+int
+main()
 {
 	node *head = NULL;
 	head = malloc(sizeof(node));
